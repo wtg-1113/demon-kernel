@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>demon-kernel</title>
+
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/shapes.css">
+</head>
+
+
+<body>
+  <div class="layout">
+    <nav class="sidebar">
+      <h2>demon-kernel</h2>
+      <ul class="sidebar-links">
+        <li><a href="index.html">home</a></li>
+        <li><a href="flow.html">流程</a></li>
+        <li><a href="plugins.html">插件</a></li>
+        <li><a href="help.html">使用說明</a></li>
+      </ul>
+    </nav>
+
+    <!-- ✅ 把右側內容放進 main.content 裡 -->
+    <main class="content">
+      <div id="rightPanel" class="panel">
+  <div id="flowWrap" class="flow-wrap">
+    <svg id="flowSvg" viewBox="0 0 900 520" width="100%" height="100%"></svg>
+
+    <!-- ① 疊在第一格上面 -->
+    <div id="dropModel" class="overlay drop-zone">
+      <div class="overlay-hint">拖曳模型檔 / 模型資料夾到這裡</div>
+
+      <!-- ✅ 顯示「已放入」的資訊（在第一格框框中） -->
+      <div id="modelInfo" class="model-info"></div>
+    </div>
+
+
+    <!-- ④ 疊在第四格上面（清單會在框內由上到下列出） -->
+    <div id="dropSelected" class="overlay">
+      <div id="selectedList" class="selected-list"></div>
+    </div>
+  </div>
+</div>
+
+    </main>
+  </div>
+    <script src="../js/flow.js"></script>
+</body>
+</html>
